@@ -798,6 +798,35 @@ export const projects: Project[] = [
       "A laptop with charts used as a stand-in for the Superstore dashboard",
     ),
   },
+  {
+    slug: "repair-retail-pos",
+    number: "28",
+    title: "Repair & Retail POS System",
+    category: "Software & Application Engineering",
+    kind: "Professional",
+    featured: false,
+    context: "Repair and retail shop operations",
+    summary:
+      "A Flask and SQLite point of sale for a repair and retail shop, covering billing, repair tickets, stock barcodes, and a Windows desktop app.",
+    overview:
+      "Day-to-day software for the shop. Cashiers bill, scan stock, and track repairs. Admins also get the sales log, forecasts, user accounts, and backups.",
+    problem:
+      "Billing, repair tickets, and stock were separate, so a sale, a barcode, and a part used on a repair were easy to lose track of.",
+    contribution: [
+      "Built multi-item billing with USB barcode scanning, PDF invoices, and thermal receipts.",
+      "Tracked repair tickets from pending to delivered, with parts, labor, and a service fee on the bill.",
+      "Managed appliance and parts stock with automatic item codes and Code128 labels.",
+      "Added an admin sales log and reports, including a short forecast, plus login, backups, and a Windows installer.",
+    ],
+    architecture: ["Flask and SQLite", "POS, inventory, and repairs", "Code128 labels and thermal receipts", "Windows desktop app"],
+    stack: ["Python", "Flask", "SQLite", "Code128", "Plotly", "ReportLab"],
+    outcome:
+      "Shop staff run billing, stock, and repairs from one local app, with a Windows installer for the counter.",
+    image: photo(
+      "photo-1556742049-0cfed4f6a45d",
+      "A checkout counter used as a stand-in for the point of sale",
+    ),
+  },
 ];
 
 export function getProject(slug: string) {
