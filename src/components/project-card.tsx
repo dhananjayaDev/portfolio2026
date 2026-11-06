@@ -35,12 +35,6 @@ export function ProjectCard({
 }) {
   const reduce = useReducedMotion();
   const tone = cardTone(project);
-  const initials = project.title
-    .split(/\s+/)
-    .slice(0, 2)
-    .map((word) => word[0])
-    .join("")
-    .toUpperCase();
 
   const body = (
     <Link href={`/projects/${project.slug}`} className="group relative flex h-full flex-col">
@@ -68,10 +62,10 @@ export function ProjectCard({
       </div>
       <div className="flex flex-1 flex-col px-5 pt-0 pb-6 md:px-6">
         <div
-          className="relative -mt-7 grid size-14 place-items-center rounded-xl bg-(--card) text-sm font-bold text-black shadow-[0_6px_14px_rgba(0,0,0,0.28)] transition duration-300 ease-out group-hover:-translate-y-1"
+          className="relative -mt-7 size-14 overflow-hidden rounded-xl bg-(--card) shadow-[0_6px_14px_rgba(0,0,0,0.28)] transition duration-300 ease-out group-hover:-translate-y-1"
           style={{ ["--card" as string]: tone.app }}
         >
-          {initials}
+          <Image src="/cards/wolf.png" alt="" fill sizes="56px" className="object-cover" />
         </div>
         <h3 className="mt-4 font-display text-[1.7rem] leading-none font-medium tracking-[-0.03em] text-strong">
           <ColoredTitle title={project.title} ink={tone.ink} inkDark={tone.inkDark} />
