@@ -10,9 +10,15 @@ export function Footer() {
           <span className="px-2">/</span>
           {site.location}
         </p>
-        <div className="flex gap-5">
+        <div className="flex flex-wrap gap-x-5 gap-y-2">
           <a href={`mailto:${site.email}`} className="hover:text-foreground">
             Email
+          </a>
+          <a href={site.linkedin} target="_blank" rel="noopener noreferrer" className="hover:text-foreground">
+            LinkedIn
+          </a>
+          <a href={site.github} target="_blank" rel="noopener noreferrer" className="hover:text-foreground">
+            GitHub
           </a>
           <a href={site.discord} target="_blank" rel="noopener noreferrer" className="hover:text-foreground">
             Discord

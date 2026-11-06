@@ -12,12 +12,9 @@ export const site = {
   location: "Colombo, Sri Lanka",
   region: "Sri Lanka",
   email: "d.dhananjaya@outlook.com",
-  discord: "https://discord.gg/statgeekofficial",
-  discordHandle: "statgeekofficial",
-  /** Paste your public profile URL here. Leave blank until you have one. */
-  linkedin: "",
-  /** Paste your public profile URL here. Leave blank until you have one. */
-  github: "",
+  discord: "https://discord.gg/9xsctP2GH",
+  linkedin: "https://www.linkedin.com/in/dhananjayadissanayake/",
+  github: "https://github.com/dhananjayaDev",
   portrait: "/brand/profile3.png",
   portraitAlt: "Dhananjaya Dissanayake",
   years: "4+",

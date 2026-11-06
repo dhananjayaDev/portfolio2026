@@ -29,7 +29,23 @@ export default function CvPage() {
           <PrintButton />
         </div>
         <p className="mt-6 text-sm">
-          {site.email} · {site.location}
+          <a href={`mailto:${site.email}`} className="underline">
+            {site.email}
+          </a>
+          {" · "}
+          <a href={site.linkedin} target="_blank" rel="noopener noreferrer" className="underline">
+            LinkedIn
+          </a>
+          {" · "}
+          <a href={site.github} target="_blank" rel="noopener noreferrer" className="underline">
+            GitHub
+          </a>
+          {" · "}
+          <a href={site.discord} target="_blank" rel="noopener noreferrer" className="underline">
+            Discord
+          </a>
+          {" · "}
+          {site.location}
         </p>
 
         <CvSection title="Experience">

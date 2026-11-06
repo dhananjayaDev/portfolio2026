@@ -16,18 +16,16 @@ export default function ContactPage() {
         index="06"
         eyebrow="Contact"
         title="Start a conversation."
-        lede="Email is the direct route. Profile links appear once the public URLs are added. A phone number is intentionally left off this page."
+        lede="Email, LinkedIn, GitHub, and the Discord server are below. A phone number is intentionally left off this page."
       />
       <div className="divide-y divide-line">
         <Row label="Email" value={site.email} href={`mailto:${site.email}`} />
-        <Row label="LinkedIn" value={site.linkedin ? "LinkedIn profile" : "Profile URL not added yet"} href={site.linkedin || undefined} />
-        <Row label="GitHub" value={site.github ? "GitHub profile" : "Profile URL not added yet"} href={site.github || undefined} />
+        <Row label="LinkedIn" value="LinkedIn profile" href={site.linkedin} />
+        <Row label="GitHub" value="GitHub profile" href={site.github} />
+        <Row label="Discord" value="Join the Discord" href={site.discord} />
         <Row label="Location" value={site.region} />
         <Row label="CV" value="View and print" href="/cv" />
       </div>
-      <p className="px-6 py-8 text-sm text-muted md:px-10">
-        Add LinkedIn and GitHub in <span className="text-foreground">src/data/site.ts</span>. The mobile number stays private.
-      </p>
     </Shell>
   );
 }
@@ -50,8 +48,14 @@ function Row({ label, value, href }: { label: string; value: string; href?: stri
     );
   }
 
+  const external = href.startsWith("http");
+
   return (
-    <a href={href} className="block px-6 hover:text-accent-ink md:px-10">
+    <a
+      href={href}
+      {...(external ? { target: "_blank", rel: "noopener noreferrer" } : {})}
+      className="block px-6 hover:text-accent-ink md:px-10"
+    >
       {content}
     </a>
   );

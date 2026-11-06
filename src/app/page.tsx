@@ -1,5 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
+import { siDiscord, siGithub } from "simple-icons";
+import { BrandIcon } from "@/components/brand-icon";
 import { ProjectGrid } from "@/components/project-card";
 import { Reveal } from "@/components/reveal";
 import { SectionAddress } from "@/components/section-address";
@@ -31,6 +33,24 @@ export default function HomePage() {
             >
               View the lineup
             </Link>
+            <a
+              href={site.discord}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-2 border border-line px-4 py-2.5 font-mono text-[11px] tracking-[0.16em] text-foreground uppercase hover:border-foreground"
+            >
+              <BrandIcon icon={siDiscord} />
+              Join the Discord
+            </a>
+            <a
+              href={site.github}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-2 border border-line px-4 py-2.5 font-mono text-[11px] tracking-[0.16em] text-foreground uppercase hover:border-foreground"
+            >
+              <BrandIcon icon={siGithub} />
+              Browse on GitHub
+            </a>
             <Link
               href="/contact"
               className="border border-line px-4 py-2.5 font-mono text-[11px] tracking-[0.16em] text-foreground uppercase hover:border-foreground"
