@@ -1,26 +1,88 @@
 @import "tailwindcss";
 
+@custom-variant dark (&:where(.dark, .dark *));
+
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --background: #f2f1ee;
+  --foreground: #121316;
+  --strong: #0b0b0c;
+  --surface: #ffffff;
+  --sunken: #e6e5e1;
+  --muted: rgba(18, 19, 22, 0.62);
+  --faint: rgba(18, 19, 22, 0.42);
+  --line: rgba(18, 19, 22, 0.12);
+  --accent: #2d81ff;
+  --accent-ink: #1a5fd4;
+  color-scheme: light;
+}
+
+.dark {
+  --background: #121316;
+  --foreground: #f2f1ee;
+  --strong: #ffffff;
+  --surface: #101014;
+  --sunken: #060607;
+  --muted: rgba(242, 241, 238, 0.6);
+  --faint: rgba(242, 241, 238, 0.38);
+  --line: rgba(242, 241, 238, 0.15);
+  --accent: #2d81ff;
+  --accent-ink: #74aaff;
+  color-scheme: dark;
 }
 
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
+  --color-strong: var(--strong);
+  --color-surface: var(--surface);
+  --color-sunken: var(--sunken);
+  --color-muted: var(--muted);
+  --color-faint: var(--faint);
+  --color-line: var(--line);
+  --color-accent: var(--accent);
+  --color-accent-ink: var(--accent-ink);
+  --font-sans: var(--font-inter);
   --font-mono: var(--font-geist-mono);
+  --font-display: var(--font-archivo);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
 }
 
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-inter), Inter, system-ui, sans-serif;
+}
+
+::selection {
+  background: #2d81ff;
+  color: #ffffff;
+}
+
+:focus-visible {
+  outline: 2px solid #2d81ff;
+  outline-offset: 3px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+}
+
+@media print {
+  .no-print {
+    display: none !important;
+  }
+
+  body {
+    background: white !important;
+    color: #121316 !important;
+  }
 }
