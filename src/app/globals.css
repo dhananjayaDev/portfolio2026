@@ -11,6 +11,7 @@
   --muted: rgba(18, 19, 22, 0.62);
   --faint: rgba(18, 19, 22, 0.42);
   --line: rgba(18, 19, 22, 0.12);
+  --line-strong: rgba(18, 19, 22, 0.4);
   --accent: #2d81ff;
   --accent-ink: #1a5fd4;
   color-scheme: light;
@@ -25,6 +26,7 @@
   --muted: rgba(242, 241, 238, 0.6);
   --faint: rgba(242, 241, 238, 0.38);
   --line: rgba(242, 241, 238, 0.15);
+  --line-strong: rgba(242, 241, 238, 0.4);
   --accent: #2d81ff;
   --accent-ink: #74aaff;
   color-scheme: dark;
@@ -51,6 +53,7 @@
 }
 
 html {
+  overflow-x: clip;
   scroll-behavior: smooth;
 }
 
@@ -68,6 +71,38 @@ body {
 :focus-visible {
   outline: 2px solid #2d81ff;
   outline-offset: 3px;
+}
+
+.tick {
+  pointer-events: none;
+  position: absolute;
+  width: 11px;
+  height: 11px;
+}
+
+.tick::before,
+.tick::after {
+  content: "";
+  position: absolute;
+  background: var(--line-strong);
+}
+
+.tick::before {
+  top: 0;
+  bottom: 0;
+  left: 5px;
+  width: 1px;
+}
+
+.tick-half::before {
+  top: 5px;
+}
+
+.tick::after {
+  top: 5px;
+  right: 0;
+  left: 0;
+  height: 1px;
 }
 
 @media (prefers-reduced-motion: reduce) {

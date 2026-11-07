@@ -6,6 +6,6 @@ export function Shell({
   className?: string;
 }) {
   return (
-    <div className={`mx-auto w-full max-w-[1280px] border-x border-line ${className}`}>{children}</div>
+    <div className={`relative mx-auto w-full max-w-[1280px] border-x border-line ${className}`}>{children}</div>
   );
 }

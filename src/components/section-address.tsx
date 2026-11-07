@@ -28,15 +28,10 @@ export function SectionAddress({
     </div>
   );
 
-  const className = "sticky top-12 z-30 border-y border-line bg-background/60 backdrop-blur-md";
-
-  if (reduce) {
-    return <div className={className}>{inner}</div>;
-  }
-
-  return (
+  const content = reduce ? (
+    inner
+  ) : (
     <motion.div
-      className={className}
       initial={{ opacity: 0, y: 28, filter: "blur(8px)" }}
       whileInView={{ opacity: 1, y: 0, filter: "blur(0px)" }}
       viewport={{ once: true, margin: "-48px 0px -30% 0px" }}
@@ -44,5 +39,12 @@ export function SectionAddress({
     >
       {inner}
     </motion.div>
+  );
+
+  return (
+    <div className="sticky top-12 z-30">
+      <div aria-hidden="true" className="pointer-events-none absolute top-0 left-[calc(50%-50vw)] z-10 h-px w-screen bg-line" />
+      <div className="border-b border-line bg-background/60 backdrop-blur-md">{content}</div>
+    </div>
   );
 }

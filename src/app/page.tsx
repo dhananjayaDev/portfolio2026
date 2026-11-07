@@ -47,14 +47,23 @@ export default function HomePage() {
   const lineup = getLineup();
 
   return (
-    <Shell>
-      <section className="border-b border-line px-6 py-16 md:px-10 md:py-24">
+    <>
+      <section
+        id="hero"
+        aria-label="Hero"
+        className="mx-auto min-h-[calc(100svh-3rem)] w-full max-w-[1280px]"
+      />
+      <Shell>
+      <span aria-hidden="true" className="tick tick-half z-[31] -top-[5px] -left-[6px]" />
+      <span aria-hidden="true" className="tick tick-half z-[31] -top-[5px] -right-[5px]" />
+      <section className="border-b border-line">
+        <SectionAddress index="01" label="Engineering work" title={site.roles.join(" · ")} />
+        <div className="px-6 py-16 md:px-10 md:py-24">
         <Reveal>
-          <p className="font-mono text-[11px] tracking-[0.18em] text-faint uppercase">01 / Engineering work</p>
-          <p className="mt-8 font-mono text-[11px] tracking-[0.16em] text-muted uppercase">
+          <p className="mb-4 font-mono text-[11px] tracking-[0.16em] text-muted uppercase sm:hidden">
             {site.roles.join(" · ")}
           </p>
-          <h1 className="mt-4 max-w-4xl font-display text-5xl leading-[0.95] font-semibold tracking-[-0.03em] text-strong sm:text-7xl">
+          <h1 className="max-w-4xl font-display text-5xl leading-[0.95] font-semibold tracking-[-0.03em] text-strong sm:text-7xl">
             {projects.length} systems. One <span className="text-accent-ink">practice.</span>
           </h1>
         </Reveal>
@@ -93,6 +102,7 @@ export default function HomePage() {
             </Link>
           </div>
         </Reveal>
+        </div>
       </section>
 
       <section id="lineup" className="scroll-mt-12 border-b border-line">
@@ -207,5 +217,6 @@ export default function HomePage() {
         </div>
       </section>
     </Shell>
+    </>
   );
 }
