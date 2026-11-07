@@ -70,9 +70,9 @@ export type Project = {
   links?: { label: string; href: string }[];
 };
 
-function photo(id: string, alt: string) {
+function photo(number: string, alt: string) {
   return {
-    src: `https://images.unsplash.com/${id}?auto=format&fit=crop&w=1800&q=80`,
+    src: `/cards/art/${number}.svg`,
     alt,
   };
 }
@@ -102,8 +102,8 @@ export const projects: Project[] = [
     stack: ["Microsoft Fabric", "Dataflow Gen2", "REST API", "Power BI", "DAX", "Azure"],
     outcome: "Centralized analytical data and reduced manual reporting effort.",
     image: photo(
-      "photo-1551288049-bebda4e38f71",
-      "Analytics dashboard used as a stand-in for Business Central reporting",
+      "01",
+      "Geometric study 01",
     ),
   },
   {
@@ -129,8 +129,8 @@ export const projects: Project[] = [
     stack: ["SQL Server", "SSIS", "ETL", "Star Schema", "DAX"],
     outcome: "A modelled warehouse with dashboards built for analytical queries.",
     image: photo(
-      "photo-1543286386-713bdd548da4",
-      "Charts used as a stand-in for the warehouse dashboards",
+      "02",
+      "Geometric study 02",
     ),
   },
   {
@@ -156,8 +156,8 @@ export const projects: Project[] = [
     stack: ["Python", "Pandas", "Google Colab", "Scikit-learn", "Random Forest", "Flask"],
     outcome: "A working application for predicting employee job-change intention.",
     image: photo(
-      "photo-1600880292203-757bb62b4baf",
-      "Team discussion used as a stand-in for the HR analytics platform",
+      "03",
+      "Geometric study 03",
     ),
   },
   {
@@ -184,8 +184,8 @@ export const projects: Project[] = [
     stack: ["Python", "Matplotlib", "AI Agents", "ETL"],
     outcome: "Cleaned spreadsheet data with automated visualization.",
     image: photo(
-      "photo-1460925895917-afdab827c52f",
-      "Laptop dashboard used as a stand-in for Dashboard AI",
+      "04",
+      "Geometric study 04",
     ),
   },
   {
@@ -211,8 +211,8 @@ export const projects: Project[] = [
     stack: ["LangChain", "OpenAI API", "FAISS", "Streamlit"],
     outcome: "A question-answering application grounded in the Sri Lankan Constitution.",
     image: photo(
-      "photo-1589829545856-d10d557cf95f",
-      "Law books used as a stand-in for the constitution support system",
+      "05",
+      "Geometric study 05",
     ),
   },
   {
@@ -237,8 +237,8 @@ export const projects: Project[] = [
     stack: ["Sentence-BERT", "SHAP", "LIME", "NLP"],
     outcome: "Explainable semantic scores for resume and job-description pairs.",
     image: photo(
-      "photo-1586281380349-632531db7ed4",
-      "Desk with documents used as a stand-in for resume matching",
+      "06",
+      "Geometric study 06",
     ),
   },
   {
@@ -264,8 +264,8 @@ export const projects: Project[] = [
     stack: ["OpenCV", "SegNet", "U-Net", "Deep Learning"],
     outcome: "Lane detection and driving-anomaly identification from visual input.",
     image: photo(
-      "photo-1549317661-bd32c8ce0db2",
-      "Road scene used as a stand-in for lane detection",
+      "07",
+      "Geometric study 07",
     ),
   },
   {
@@ -290,8 +290,8 @@ export const projects: Project[] = [
     stack: ["AI/ML", "Data Processing"],
     outcome: "Fraud detection capabilities applied to insurance claims.",
     image: photo(
-      "photo-1450101499163-c8848c66ca85",
-      "Contract review used as a stand-in for insurance claims analysis",
+      "08",
+      "Geometric study 08",
     ),
   },
   {
@@ -317,8 +317,8 @@ export const projects: Project[] = [
     stack: ["MongoDB", "Express", "React", "Node.js"],
     outcome: "A working commerce flow from account and cart through order and payment.",
     image: photo(
-      "photo-1441986300917-64674bd600d8",
-      "Clothing rail used as a stand-in for the thrift store",
+      "09",
+      "Geometric study 09",
     ),
   },
   {
@@ -341,8 +341,8 @@ export const projects: Project[] = [
     stack: ["Flask", "Mistral AI", "Hugging Face"],
     outcome: "A chatbot for wedding planning questions and information retrieval.",
     image: photo(
-      "photo-1519741497674-611481863552",
-      "Wedding table used as a stand-in for the planning chatbot",
+      "10",
+      "Geometric study 10",
     ),
   },
   {
@@ -367,8 +367,8 @@ export const projects: Project[] = [
     stack: ["PostgreSQL", "YugabyteDB", "SQL"],
     outcome: "A migration path from PostgreSQL onto YugabyteDB.",
     image: photo(
-      "photo-1544383835-bda2bc66a55d",
-      "Server hardware used as a stand-in for the database migration",
+      "11",
+      "Geometric study 11",
     ),
   },
   {
@@ -393,8 +393,8 @@ export const projects: Project[] = [
     stack: ["Zoom API", "Zapier"],
     outcome: "Meeting transcripts stored and available to performance dashboards.",
     image: photo(
-      "photo-1588196749597-9ff075ee6b5b",
-      "Video call used as a stand-in for HR meeting automation",
+      "12",
+      "Geometric study 12",
     ),
   },
   {
@@ -419,8 +419,8 @@ export const projects: Project[] = [
     stack: ["Zapier", "Outlook"],
     outcome: "A workflow from email and Trello through to purchase-order conversion.",
     image: photo(
-      "photo-1484480974693-6ca0a78fb36b",
-      "Desk planning used as a stand-in for business workflow automation",
+      "13",
+      "Geometric study 13",
     ),
   },
   {
@@ -444,8 +444,8 @@ export const projects: Project[] = [
     stack: ["AI", "Data Analytics"],
     outcome: "Analytics over employee internet activity in a smart-factory context.",
     image: photo(
-      "photo-1565043666747-69f6646db940",
-      "Factory floor used as a stand-in for Smart Factory AI",
+      "14",
+      "Geometric study 14",
     ),
   },
   {
@@ -470,8 +470,8 @@ export const projects: Project[] = [
     stack: ["IoT", "SMS", "Remote control"],
     outcome: "Alerts and remote control for an elephant fence.",
     image: photo(
-      "photo-1557050543-4d5f4e07ef46",
-      "Elephant used as a stand-in for the smart fence project",
+      "15",
+      "Geometric study 15",
     ),
   },
   {
@@ -497,8 +497,8 @@ export const projects: Project[] = [
     stack: ["ESP32", "MQTT", "GSM", "Servo", "Sensors"],
     outcome: "A feeder that can be checked and triggered remotely, with readings logged for later review.",
     image: photo(
-      "photo-1583511655857-d19b40a7a54e",
-      "Dog used as a stand-in for the smart pet feeder",
+      "16",
+      "Geometric study 16",
     ),
   },
   {
@@ -517,8 +517,8 @@ export const projects: Project[] = [
     stack: ["Python", "Pygame"],
     outcome: "A playable multi-level arcade game.",
     image: photo(
-      "photo-1550745165-9bc0b252726f",
-      "Arcade hardware used as a stand-in for TukTuk",
+      "17",
+      "Geometric study 17",
     ),
   },
   {
@@ -542,8 +542,8 @@ export const projects: Project[] = [
     stack: ["Python", "Selenium", "BeautifulSoup"],
     outcome: "Prices that respond to demand and competitor data.",
     image: photo(
-      "photo-1556742049-0cfed4f6a45d",
-      "Card payment used as a stand-in for the pricing engine",
+      "18",
+      "Geometric study 18",
     ),
   },
   {
@@ -565,8 +565,8 @@ export const projects: Project[] = [
     stack: ["Graph Neural Networks", "NLP"],
     outcome: "Graph-based detection of misinformation.",
     image: photo(
-      "photo-1504711434969-e33886168f5c",
-      "Newspapers used as a stand-in for fake news detection",
+      "19",
+      "Geometric study 19",
     ),
   },
   {
@@ -588,8 +588,8 @@ export const projects: Project[] = [
     stack: ["BERT", "Kaggle Jigsaw", "NLP"],
     outcome: "Multi-label toxicity classification for comments.",
     image: photo(
-      "photo-1516321318423-f06f85e504b3",
-      "People at laptops used as a stand-in for comment classification",
+      "20",
+      "Geometric study 20",
     ),
   },
   {
@@ -618,8 +618,8 @@ export const projects: Project[] = [
       { label: "GitHub", href: "https://github.com/IT21313370/sweethome" },
     ],
     image: photo(
-      "photo-1560518883-ce09059eeffa",
-      "A house exterior used as a stand-in for the housing price app",
+      "21",
+      "Geometric study 21",
     ),
   },
   {
@@ -646,8 +646,8 @@ export const projects: Project[] = [
     outcome: "An open-source recorder that detects a person and sends one snapshot, then waits out the cooldown.",
     links: [{ label: "GitHub", href: "https://github.com/dhananjayaDev/human-detection-dvr" }],
     image: photo(
-      "photo-1557597774-9d273605dfa9",
-      "A security camera used as a stand-in for the human detection recorder",
+      "22",
+      "Geometric study 22",
     ),
   },
   {
@@ -678,8 +678,8 @@ export const projects: Project[] = [
       { label: "GitHub", href: "https://github.com/dhananjayaDev/Kegel-app" },
     ],
     image: photo(
-      "photo-1576091160399-112ba8d25d1d",
-      "A clinician's desk used as a stand-in for the Kegel Health assessment",
+      "23",
+      "Geometric study 23",
     ),
   },
   {
@@ -713,8 +713,8 @@ export const projects: Project[] = [
     outcome:
       "Out of sample over 58 days, MAPE was 20.2% and RMSE was 3.38, ahead of Holt-Winters. The next-day forecast was 15.9 patients, against a steady mean of about 16 a day. General Practice referrals and walk-ins drove volume. The write-up proposed a fast-track triage corridor, rosters fixed at that mean, and safety stock at the 95% prediction interval of 23 patients.",
     image: photo(
-      "photo-1519494026892-80bbd2d6fd0d",
-      "A hospital corridor used as a stand-in for the admissions forecast",
+      "24",
+      "Geometric study 24",
     ),
   },
   {
@@ -741,8 +741,8 @@ export const projects: Project[] = [
     outcome: "An open-source dashboard for current conditions and a seven-day forecast, built to be read like a BI report.",
     links: [{ label: "GitHub", href: "https://github.com/dhananjayaDev/streamlit-weather-dashboard" }],
     image: {
-      src: "https://raw.githubusercontent.com/dhananjayaDev/streamlit-weather-dashboard/master/Screenshot%202025-07-02%20140042.png",
-      alt: "Screenshot of the Weather BI Dashboard",
+      src: "/cards/art/25.svg",
+      alt: "Geometric study 25",
     },
   },
   {
@@ -767,8 +767,8 @@ export const projects: Project[] = [
     stack: ["ESP32", "GY-GPS6MV2", "Flask", "Leaflet.js", "JavaScript"],
     outcome: "A live map of the device, with its status and the timestamp of the latest fix.",
     image: photo(
-      "photo-1524661135-423995f22d0b",
-      "A map used as a stand-in for the live GPS tracker",
+      "26",
+      "Geometric study 26",
     ),
   },
   {
@@ -794,8 +794,8 @@ export const projects: Project[] = [
     outcome:
       "A Superstore sales report whose visuals also carry Power BI's automatic reads of outliers, trends, and seasonality.",
     image: photo(
-      "photo-1460925895917-afdab827c52f",
-      "A laptop with charts used as a stand-in for the Superstore dashboard",
+      "27",
+      "Geometric study 27",
     ),
   },
   {
@@ -823,8 +823,8 @@ export const projects: Project[] = [
     outcome:
       "Shop staff run billing, stock, and repairs from one local app, with a Windows installer for the counter.",
     image: photo(
-      "photo-1556742049-0cfed4f6a45d",
-      "A checkout counter used as a stand-in for the point of sale",
+      "28",
+      "Geometric study 28",
     ),
   },
 ];
@@ -844,7 +844,8 @@ export function getLineup() {
 }
 
 export function getRelatedProjects(project: Project) {
-  return projects
-    .filter((item) => item.category === project.category && item.slug !== project.slug)
-    .slice(0, 3);
+  const others = projects.filter((item) => item.slug !== project.slug);
+  const same = others.filter((item) => item.category === project.category);
+  const rest = others.filter((item) => item.category !== project.category);
+  return [...same, ...rest].slice(0, 4);
 }

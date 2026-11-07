@@ -1,12 +1,14 @@
-import { ChartColumn, Cpu, Database, GitBranch, MessagesSquare, Monitor } from "lucide-react";
+import { ChartColumn, Cpu, Database, GitBranch, LayoutGrid, MessagesSquare, Monitor } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 import { siDiscord, siGithub } from "simple-icons";
 import { BrandIcon } from "@/components/brand-icon";
+import { HashLink } from "@/components/hash-link";
 import { ProjectGrid } from "@/components/project-card";
 import { Reveal } from "@/components/reveal";
 import { SectionAddress } from "@/components/section-address";
 import { Shell } from "@/components/shell";
+import { GridPattern } from "@/components/ui/grid-pattern";
 import { getLineup, projects } from "@/data/projects";
 import { site } from "@/data/site";
 
@@ -51,8 +53,41 @@ export default function HomePage() {
       <section
         id="hero"
         aria-label="Hero"
-        className="mx-auto min-h-[calc(100svh-3rem)] w-full max-w-[1280px]"
-      />
+        className="relative flex min-h-[calc(100svh-3rem)] w-full items-center justify-center overflow-hidden px-6"
+      >
+        <GridPattern className="absolute inset-0 min-h-[420px] w-full" fade="radial" />
+        <div className="relative z-10 flex w-full max-w-3xl flex-col items-center text-center">
+          <p className="font-display text-[clamp(2.75rem,11vw,8.5rem)] leading-[0.85] font-semibold tracking-[-0.045em] text-strong uppercase">
+            Dhananjaya
+          </p>
+          <p className="mt-6 font-display text-2xl font-semibold tracking-[-0.03em] text-strong sm:mt-8 sm:text-4xl">
+            Data, models, and software.
+          </p>
+          <p className="mt-4 max-w-xl text-base leading-relaxed text-muted sm:text-lg">
+            I build pipelines, dashboards, and applications for people who run them.
+          </p>
+          <div className="mt-8 flex flex-wrap items-center justify-center gap-3">
+            <a
+              href={site.linkedin}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex min-w-48 items-center justify-center gap-3 bg-foreground px-8 py-3.5 font-mono text-[12px] font-bold tracking-[0.14em] text-background uppercase transition-opacity duration-150 hover:opacity-80"
+            >
+              <svg viewBox="0 0 24 24" aria-hidden="true" className="size-[18px]" fill="currentColor">
+                <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z" />
+              </svg>
+              LinkedIn
+            </a>
+            <HashLink
+              href="#lineup"
+              className="inline-flex min-w-48 items-center justify-center gap-3 border border-foreground px-8 py-3.5 font-mono text-[12px] font-bold tracking-[0.14em] text-foreground uppercase transition-colors duration-150 hover:border-transparent hover:bg-foreground hover:text-background"
+            >
+              <LayoutGrid aria-hidden="true" size={18} />
+              Explore
+            </HashLink>
+          </div>
+        </div>
+      </section>
       <Shell>
       <span aria-hidden="true" className="tick tick-half z-[31] -top-[5px] -left-[6px]" />
       <span aria-hidden="true" className="tick tick-half z-[31] -top-[5px] -right-[5px]" />
@@ -70,12 +105,12 @@ export default function HomePage() {
         <Reveal delay={0.08}>
           <p className="mt-6 max-w-2xl text-lg leading-relaxed text-muted">{site.summary}</p>
           <div className="mt-8 flex flex-wrap gap-3">
-            <Link
+            <HashLink
               href="#lineup"
               className="bg-foreground px-4 py-2.5 font-mono text-[11px] tracking-[0.16em] text-background uppercase"
             >
               View the lineup
-            </Link>
+            </HashLink>
             <a
               href={site.discord}
               target="_blank"
